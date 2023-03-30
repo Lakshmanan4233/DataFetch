@@ -31,20 +31,20 @@ public class FetchData extends BaseClass{
 
 
 		getDriver(); implicitywaits(10);
-		getUrl("https://qa-deeptext.tech.us/#/login");
-		sendkeys(elementById("email"), "lsanthanakumar@compindia.com");
-		sendkeys(elementById("password"), "Test@123");
-		click(elementByXpath("//button[.='Log In']"));
+		getUrl("");
+		sendkeys(elementById("email"), "");
+		sendkeys(elementById("password"), "");
+		click(elementByXpath(""));
 		sleeps(5000);
-		click(elementByXpath("//h5[.='Bangladeshi Restaurant Reviews']"));
+		click(elementByXpath("//h5[.='']"));
 		sleeps(7000);
-		click(elementByXpath("//button[.='Topics']"));
+		click(elementByXpath(""));
 		sleeps(5000);
 		
-		javaexecutorScrollDown(elementByXpath("(//div[@class='summary-wrapper p-3 mt-2'])[1]"));
+		javaexecutorScrollDown(elementByXpath(""));
 		sleeps(5000);
 		
-		WebElement text =  elementByXpath("(//*[local-name()='svg']//*[name()='g' and @class='google-visualization-tooltip']//*[name()='g']//*[name()='text'])[1]");
+		WebElement text =  elementByXpath("");
 		
 		System.out.println(getText(text)); 
 
@@ -95,19 +95,19 @@ public class FetchData extends BaseClass{
 		
 
 		getDriver(); implicitywaits(10);
-		getUrl("https://qa-deeptext.tech.us/#/login");
-		sendkeys(elementById("email"), "lsanthanakumar@compindia.com");
-		sendkeys(elementById("password"), "Test@123");
-		click(elementByXpath("//button[.='Log In']"));
+		getUrl("");
+		sendkeys(elementById("email"), "");
+		sendkeys(elementById("password"), "");
+		click(elementByXpath(""));
 		sleeps(5000);
-		click(elementByXpath("//h5[.='Bangladeshi Restaurant Reviews']"));
+		click(elementByXpath(""));
 		sleeps(7000);
 		
-		String sortTable = "//div[.='Sub-Topics Count by Topics']/parent::div/following-sibling::div/child::div/child::div/child::div/child::div/child::div/child::div/child::div[text()='Topic Name']";
+		String sortTable = "";
 		
 		click(elementByXpath(sortTable));
 		
-		List<WebElement> elementsByXpath = elementsByXpath("(//div[@data-column-id='1' and 'gridcell'])[position()>=20 and position()<=24]");
+		List<WebElement> elementsByXpath = elementsByXpath("");
 		
 		List<String> collectWeb = elementsByXpath.stream().map(d->d.getText()).collect(Collectors.toList());
 		
@@ -123,17 +123,17 @@ public class FetchData extends BaseClass{
 	public static void fetchDatawithPagination(String projectName) throws Exception {
 		
 		getDriver(); implicitywaits(10);
-		getUrl("https://qa-deeptext.tech.us/#/login");
-		sendkeys(elementById("email"), "lsanthanakumar@compindia.com");
-		sendkeys(elementById("password"), "Test@123");
-		click(elementByXpath("//button[.='Log In']"));
+		getUrl("");
+		sendkeys(elementById("email"), "");
+		sendkeys(elementById("password"), "");
+		click(elementByXpath(""));
 		sleeps(5000);
-		click(elementByXpath("//h5[.='"+projectName+"']"));
+		click(elementByXpath(""));
 		sleeps(7000);
 		
 		
 		
-		List<WebElement> elementsByXpath = elementsByXpath("(//div[@role='rowgroup']//child::div[@role='gridcell' and @data-column-id='1']//child::div)[position()>=1 and position()<=10]");
+		List<WebElement> elementsByXpath = elementsByXpath("");
 
 		
 	}
